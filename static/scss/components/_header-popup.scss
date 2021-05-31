@@ -1,0 +1,234 @@
+.header-popup{
+  position: fixed;
+  top: 114px;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all ease 300ms;
+  &.active{
+    top: 74px;
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+    transition: all ease 100ms;
+  }
+  &__wrap{
+    width: 300px;
+    background: $white;
+    border-radius: 5px;
+    box-shadow: 0px 36px 49px rgba(0, 0, 0, 0.03), 0px 10.8529px 14.7721px rgba(0, 0, 0, 0.0195477), 0px 4.50776px 6.13556px rgba(0, 0, 0, 0.015), 0px 1.63037px 2.21911px rgba(0, 0, 0, 0.0104523);
+    padding: 24px 20px;
+    &:after{
+      position: absolute;
+      content: '';
+      right: 15px;
+      top: -4px;
+      background: url("../images/svg/ic-bg-popup.svg") no-repeat top center;
+      width: 10px;
+      height: 5px;
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+    color: $default;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+.login-list, .messenger-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  li{
+    margin-right: 10px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  a{
+    width: 53px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &.login-item__google{
+      background: #4285F4;
+      &:hover{
+      background: rgba(#4285F4, .8);
+      }
+    }
+    &.login-item__facebook{
+      background: #325797;
+      &:hover{
+      background: rgba(#325797, .8);
+      }
+    }
+    &.login-item__twitter{
+      background: #41ABE1;
+      &:hover{
+      background: rgba(#41ABE1, .8);
+      }
+    }
+    &.login-item__apple{
+      background: #14141A;
+      &:hover{
+      background: rgba(#14141A, .8);
+      }
+    }
+    &.item__whatsapp{
+      background: #25D366;
+      &:hover{
+      background: rgba(#25D366, .8);
+      }
+    }
+    &.item__messenger{
+      background: #0078FF;
+      &:hover{
+        background: rgba(#0078FF, .8);
+      }
+    }
+    &.item__skype{
+      background: #00AFF0;
+      &:hover{
+      background: rgba(#00AFF0, .8);
+      }
+    }
+    &.item__wechat{
+      background: #0ABA08;
+      &:hover{
+      background: rgba(#0ABA08, .8);
+      }
+    }
+    .icon{
+      fill: $white;
+    }
+  }
+}
+.login-info{
+  text-align: center;
+  font-size: 12px;
+  line-height: 120%;
+  color: $gray;
+  margin-bottom: 16px;
+  a{
+    font-family: $Lato;
+    color: $orange;
+    display: inline-block;
+  }
+}
+.login-and{
+  text-align: center;
+  margin-bottom: 18px;
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #EEEEF2;
+    z-index: 1;
+  }
+  span{
+    background: $white;
+    color: $gray-100;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    text-transform: uppercase;
+    width: 43px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+}
+.login-button{
+  width: 100%;
+  a{
+    width: 100%;
+  }
+}
+.popup-lang,
+.popup-money{
+  .header-popup__wrap{
+    padding: 10px 0;
+  }
+}
+.lang-list,
+.money-list{
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $Lato;
+    padding: 13px 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: $default;
+    &.active{
+      color: $orange;
+      .icon{
+        display: block;
+        fill: $orange;
+      }
+      .money{
+        display: none;
+      }
+    }
+    &:hover{
+      background: $light;
+    }
+  }
+  .icon{
+    display: none;
+  }
+  span{
+    font-family: $Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    color: $gray;
+  }
+}
+.popup-phone{}
+.phone-block{
+  position: relative;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  .icon{
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
+    position: absolute;
+  }
+  a{
+    font-family: $Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: $default;
+    display: block;
+    margin-bottom: 6px;
+    &:hover{
+      color: $orange;
+    }
+  }
+  span{
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    color: $gray;
+  }
+}

@@ -1,0 +1,11 @@
+.main-slider{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  .swiper-slide{
+    img{
+      width: 100%;
+    }
+  }
+}
