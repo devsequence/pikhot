@@ -312,14 +312,17 @@
 
         }
       }
-      &:hover{
-
+      &:hover, &.active{
         background: $default-100;
         color: $white;
         .icon{
           fill: $white;
         }
       }
+    }
+    &-item__top{
+      display: flex;
+      align-items: center;
     }
     .icon{
       fill: $gray-200;
@@ -329,6 +332,12 @@
       width: 10px;
       height: 10px;
       margin: 0 0 0 10px;
+    }
+    &-popup__inner{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 70px;
     }
   }
 }
